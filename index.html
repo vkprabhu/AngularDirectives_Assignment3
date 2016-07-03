@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+    <head>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <title>Home page</title>
+        <script src="angular.js"></script>
+    </head>
+    <body>
+        <script>
+        var myModule = angular.module("myapp", []);
+        myModule.controller("mycontroller", function($scope) {
+            $scope.functionAlert = function() {
+                alert("You have double clicked on a button.")
+            }
+        });
+            
+        </script>
+        <div ng-controller="mycontroller">
+            <input type="button" value = "click" ng-dblclick="functionAlert()">
+        </div>
+    </body>
+</html>
